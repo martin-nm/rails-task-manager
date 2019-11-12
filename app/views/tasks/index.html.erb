@@ -1,0 +1,11 @@
+<h1> INDEX </h1>
+<% @tasks.each do |task| %>
+  <div>
+    <p><%= task.completed ? "[✔️]" : "[ ]"%>
+    <%= link_to task.title, task_path(task) %></p>
+  </div>
+<% end %>
+
+<p><%= link_to "Add a task", tasks_new_path %></p>
+
+
